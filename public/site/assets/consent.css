@@ -1,0 +1,25 @@
+@import "./home-tokens.css";
+.vc-cb{position:fixed;z-index:1000;left:16px;right:16px;bottom:16px;max-width:460px;margin-left:auto;padding:20px;border-radius:22px;
+  background:var(--home-background);color:var(--home-foreground);border:1px solid var(--home-border);
+  box-shadow:0 20px 50px -20px oklch(0.2 0.022 155 / 45%);font:15px/1.5 Nunito,system-ui,sans-serif;outline:none;max-height:calc(100vh - 32px);overflow:auto}
+.vc-cb-t{margin:0 0 6px;font-weight:800;font-size:17px}
+.vc-cb-p{margin:0 0 14px;color:var(--home-muted)}
+.vc-cb-p a{color:var(--home-primary);font-weight:700}
+.vc-cb-act{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.vc-cb-b{font:inherit;font-weight:800;border-radius:999px;padding:10px 14px;cursor:pointer;border:1px solid transparent}
+.vc-cb-pri{background:var(--home-primary);color:var(--home-primary-foreground)}
+.vc-cb-pri:hover{background:var(--home-primary-hover)}
+.vc-cb-pri[data-a=all]{background:#dc2626;color:#fff}
+.vc-cb-pri[data-a=all]:hover{background:#b91c1c}
+.vc-cb-link{grid-column:1/-1;background:transparent;color:var(--home-primary);border-color:var(--home-border)}
+.vc-cb-link:hover{background:var(--home-subtle)}
+.vc-cb-set{display:grid;gap:8px;margin-bottom:12px}
+.vc-cb-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 12px;border-radius:14px;background:var(--home-subtle);cursor:pointer}
+.vc-cb-row b{display:block;font-size:14.5px}.vc-cb-row small{display:block;color:var(--home-muted);font-size:13px}
+.vc-cb-on{font-size:12.5px;font-weight:800;color:var(--home-primary);white-space:nowrap}
+.vc-cb-sw{appearance:none;flex:none;width:44px;height:26px;border-radius:999px;background:var(--home-border);position:relative;cursor:pointer;transition:background .2s}
+.vc-cb-sw::after{content:"";position:absolute;top:3px;left:3px;width:20px;height:20px;border-radius:50%;background:var(--home-background);transition:transform .2s}
+.vc-cb-sw:checked{background:var(--home-primary)}.vc-cb-sw:checked::after{transform:translateX(18px)}
+.vc-cb-sw:disabled{opacity:.5;cursor:not-allowed}
+.vc-cb-sw:focus-visible,.vc-cb-b:focus-visible{outline:3px solid var(--home-attention);outline-offset:2px}
+@media(max-width:900px){.vc-cb{left:10px;right:10px;bottom:10px}.vc-cb.vc-cb-tabs{bottom:84px}}

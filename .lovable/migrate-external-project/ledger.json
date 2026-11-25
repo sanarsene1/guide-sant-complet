@@ -1,0 +1,170 @@
+[
+ {
+  "capability": "project transfer to new workspace",
+  "source": "formation-carousel-main.zip",
+  "outcome": "migrate",
+  "status": "done",
+  "next_action": "none"
+ },
+ {
+  "capability": "code",
+  "source": "mon-espace-compte-main.zip",
+  "outcome": "migrate",
+  "status": "done",
+  "next_action": "none"
+ },
+ {
+  "capability": "schema",
+  "source": "drizzle/migrations/0000_account_space.sql",
+  "outcome": "migrate",
+  "status": "done",
+  "next_action": "none"
+ },
+ {
+  "capability": "records (quiz, formations, examens, animaux, rappels)",
+  "source": "ancien backend",
+  "outcome": "migrate",
+  "status": "pending",
+  "next_action": "user exports tables as CSV from the previous project (accounts start empty here)"
+ },
+ {
+  "capability": "auth identities",
+  "source": "ancien backend (email, Google, téléphone)",
+  "outcome": "migrate",
+  "status": "pending",
+  "next_action": "user exports user list; until then people create a new account"
+ },
+ {
+  "capability": "auth providers",
+  "source": "email + Google",
+  "outcome": "migrate",
+  "status": "done",
+  "next_action": "none"
+ },
+ {
+  "capability": "phone SMS sign-in",
+  "source": "Supabase phone OTP",
+  "outcome": "keep pending",
+  "status": "blocked",
+  "next_action": "needs an SMS account (e.g. Twilio) from the user"
+ },
+ {
+  "capability": "avatar file bytes",
+  "source": "bucket avatars",
+  "outcome": "migrate",
+  "status": "pending",
+  "next_action": "photos must be re-uploaded by users"
+ },
+ {
+  "capability": "storage bucket + policies",
+  "source": "avatars",
+  "outcome": "migrate",
+  "status": "done",
+  "next_action": "none"
+ },
+ {
+  "capability": "static site public/site",
+  "source": "archive",
+  "outcome": "migrate",
+  "status": "done",
+  "next_action": "none"
+ },
+ {
+  "capability": "verification",
+  "source": "-",
+  "outcome": "verify",
+  "status": "pending",
+  "next_action": "signed-in check of photo, email and password change (test user declined)"
+ },
+ {
+  "capability": "transfer to this project (formation-carousel-f5303493-main.zip)",
+  "source": "zip",
+  "outcome": "migrate",
+  "status": "done",
+  "next_action": "none"
+ },
+ {
+  "capability": "database tables, avatars storage, email/Google/Lovable sign-in in this project",
+  "source": "drizzle migrations",
+  "outcome": "migrate",
+  "status": "done",
+  "next_action": "none"
+ },
+ {
+  "capability": "existing accounts and quiz history from the previous project",
+  "source": "previous backend",
+  "outcome": "migrate",
+  "status": "pending",
+  "next_action": "user exports tables and user list as CSV, or skips"
+ },
+ {
+  "capability": "transfer to this project (animal-care-learning-hub-main.zip, 21 nov.)",
+  "source": "zip",
+  "outcome": "migrate",
+  "status": "done",
+  "next_action": "none"
+ },
+ {
+  "capability": "database tables, avatars storage, email/Google/Lovable sign-in, VAPID_SEED, hourly push schedule in this project",
+  "source": "drizzle migrations",
+  "outcome": "migrate",
+  "status": "done",
+  "next_action": "none"
+ },
+ {
+  "capability": "accounts and data from the previous project",
+  "source": "previous backend",
+  "outcome": "migrate",
+  "status": "pending",
+  "next_action": "user exports tables and user list as CSV, or skips (accounts start empty here)"
+ },
+ {
+  "capability": "transfer to this project (project-continuation-main.zip, 21 nov.)",
+  "source": "zip",
+  "outcome": "migrate",
+  "status": "done",
+  "next_action": "none"
+ },
+ {
+  "capability": "database tables, avatars storage, email/Google/Lovable sign-in, VAPID_SEED, hourly push schedule in this project",
+  "source": "drizzle migrations",
+  "outcome": "migrate",
+  "status": "done",
+  "next_action": "none"
+ },
+ {
+  "capability": "accounts and data from the previous project",
+  "source": "previous backend",
+  "outcome": "migrate",
+  "status": "pending",
+  "next_action": "user exports tables and user list as CSV, or skips (accounts start empty here)"
+ },
+ {
+  "capability": "transfer to this project (learner-feedback-hub-main.zip, 21 nov.)",
+  "source": "zip",
+  "outcome": "migrate",
+  "status": "done",
+  "next_action": "none"
+ },
+ {
+  "capability": "database tables, avatars storage, email/Google/Lovable sign-in, VAPID_SEED, hourly push schedule in this project",
+  "source": "drizzle migrations",
+  "outcome": "migrate",
+  "status": "done",
+  "next_action": "none"
+ },
+ {
+  "capability": "Gmail feedback e-mails",
+  "source": "GMAIL_* secrets",
+  "outcome": "keep",
+  "status": "pending",
+  "next_action": "user adds GMAIL_CLIENT_ID/SECRET/REFRESH_TOKEN (Cloudflare Worker secrets)"
+ },
+ {
+  "capability": "accounts and data from the previous project",
+  "source": "previous backend",
+  "outcome": "migrate",
+  "status": "pending",
+  "next_action": "user exports tables and user list as CSV, or skips (accounts start empty here)"
+ }
+]

@@ -1,0 +1,52 @@
+/* Shared by the static homepage and the application's global stylesheet. */
+:root {
+  --home-background: oklch(0.995 0.002 150);
+  --home-foreground: oklch(0.27 0.017 155);
+  --home-primary: oklch(0.43 0.071 160);
+  --home-primary-hover: oklch(0.36 0.067 160);
+  --home-primary-foreground: oklch(0.995 0.002 150);
+  --home-muted: oklch(0.52 0.018 155);
+  --home-border: oklch(0.9 0.009 155);
+  --home-subtle: oklch(0.963 0.01 155);
+  --home-premium: oklch(0.49 0.088 28);
+  --home-attention: oklch(0.6 0.15 52);
+  --home-attention-soft: oklch(0.955 0.035 70);
+  --home-danger: oklch(0.52 0.165 27);
+  --home-danger-soft: oklch(0.962 0.022 25);
+  --home-photo-foreground: oklch(1 0 0);
+  --home-photo-muted: oklch(0.93 0.009 150);
+  --home-photo-accent: oklch(0.86 0.13 150);
+  --home-photo-veil: oklch(0.2 0.022 155);
+  --home-companion-overlay: linear-gradient(90deg, oklch(0.27 0.065 160 / 96%) 0%, oklch(0.27 0.065 160 / 88%) 32%, oklch(0.27 0.065 160 / 30%) 65%, transparent 100%);
+  --home-companion-mobile-overlay: linear-gradient(180deg, transparent 0%, oklch(0.27 0.065 160 / 15%) 28%, oklch(0.27 0.065 160 / 94%) 55%, oklch(0.27 0.065 160) 100%);
+  --home-photo-overlay: linear-gradient(90deg, oklch(0.2 0.022 155 / 88%) 0%, oklch(0.2 0.022 155 / 64%) 29%, oklch(0.2 0.022 155 / 10%) 65%, transparent 100%);
+  --home-photo-mobile-overlay: linear-gradient(180deg, transparent 0%, oklch(0.2 0.022 155 / 8%) 22%, oklch(0.2 0.022 155 / 75%) 49%, oklch(0.2 0.022 155 / 95%) 100%);
+  --home-skeleton-base: oklch(0.915 0.012 155);
+  --home-skeleton-shine: oklch(0.975 0.006 155);
+  --home-skeleton-dark-base: oklch(0.3 0.03 158);
+  --home-skeleton-dark-shine: oklch(0.38 0.035 158);
+  --font-home: Arial, Helvetica, sans-serif;
+  --font-home-display: Georgia, "Times New Roman", serif;
+}
+
+.dark {
+  --home-background: oklch(0.22 0.015 155);
+  --home-foreground: oklch(0.94 0.006 155);
+  --home-primary: oklch(0.76 0.082 160);
+  --home-primary-hover: oklch(0.84 0.075 160);
+  --home-primary-foreground: oklch(0.22 0.015 155);
+  --home-muted: oklch(0.73 0.015 155);
+  --home-border: oklch(0.37 0.016 155);
+  --home-subtle: oklch(0.27 0.02 155);
+  --home-premium: oklch(0.76 0.086 28);
+  --home-attention: oklch(0.8 0.13 70);
+  --home-attention-soft: oklch(0.32 0.05 60);
+  --home-danger: oklch(0.74 0.14 25);
+  --home-danger-soft: oklch(0.3 0.05 25);
+  --home-photo-foreground: oklch(1 0 0);
+  --home-photo-muted: oklch(0.93 0.009 150);
+  --home-photo-accent: oklch(0.86 0.13 150);
+  --home-photo-veil: oklch(0.2 0.022 155);
+  --home-photo-overlay: linear-gradient(90deg, oklch(0.2 0.022 155 / 88%) 0%, oklch(0.2 0.022 155 / 64%) 29%, oklch(0.2 0.022 155 / 10%) 65%, transparent 100%);
+  --home-photo-mobile-overlay: linear-gradient(180deg, transparent 0%, oklch(0.2 0.022 155 / 8%) 22%, oklch(0.2 0.022 155 / 75%) 49%, oklch(0.2 0.022 155 / 95%) 100%);
+}

@@ -1,0 +1,11 @@
+export type QuizLevel = "facile" | "normal" | "difficile" | "expert";
+export declare const QUESTION_SECONDS_BY_LEVEL: Record<QuizLevel, number>;
+export declare const MIN_QUIZ_SECONDS: number;
+export declare const MAX_QUIZ_SECONDS: number;
+export declare const RESULT_LOADING_MS: number;
+export declare function quizDurationSeconds(questions: Array<{ niveau?: string } | string>): number;
+export declare function formatClock(totalSeconds: number): string;
+export declare function scorePercent(score: number, total: number): number;
+export declare function elapsedQuizSeconds(startedAt: number, endedAt: number, limitSeconds: number): number;
+export declare function shouldConfirmQuizExit(quizActive: boolean): boolean;
+export declare function countCorrectAnswers(questions: Array<{ choice?: number; r: Array<{ ok: boolean }> }>): number;

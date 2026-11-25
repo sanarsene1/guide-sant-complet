@@ -10,33 +10,154 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as CookiesRouteImport } from './routes/cookies'
+import { Route as DonRouteImport } from './routes/don'
+import { Route as EspaceVeterinaireRouteImport } from './routes/espace-veterinaire'
+import { Route as MonCompteRouteImport } from './routes/mon-compte'
+import { Route as ApiPushSubscribeRouteImport } from './routes/api/push-subscribe'
+import { Route as ApiQuizSyncRouteImport } from './routes/api/quiz-sync'
+import { Route as FormationsIndexRouteImport } from './routes/formations.index'
+import { Route as FormationsCourseIdRouteImport } from './routes/formations.$courseId'
+import { Route as ApiPublicJobsPushTickRouteImport } from './routes/api/public/jobs/push-tick'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CookiesRoute = CookiesRouteImport.update({
+  id: '/cookies',
+  path: '/cookies',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DonRoute = DonRouteImport.update({
+  id: '/don',
+  path: '/don',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EspaceVeterinaireRoute = EspaceVeterinaireRouteImport.update({
+  id: '/espace-veterinaire',
+  path: '/espace-veterinaire',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MonCompteRoute = MonCompteRouteImport.update({
+  id: '/mon-compte',
+  path: '/mon-compte',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiPushSubscribeRoute = ApiPushSubscribeRouteImport.update({
+  id: '/api/push-subscribe',
+  path: '/api/push-subscribe',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiQuizSyncRoute = ApiQuizSyncRouteImport.update({
+  id: '/api/quiz-sync',
+  path: '/api/quiz-sync',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FormationsIndexRoute = FormationsIndexRouteImport.update({
+  id: '/formations/',
+  path: '/formations/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FormationsCourseIdRoute = FormationsCourseIdRouteImport.update({
+  id: '/formations/$courseId',
+  path: '/formations/$courseId',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiPublicJobsPushTickRoute = ApiPublicJobsPushTickRouteImport.update({
+  id: '/api/public/jobs/push-tick',
+  path: '/api/public/jobs/push-tick',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/cookies': typeof CookiesRoute
+  '/don': typeof DonRoute
+  '/espace-veterinaire': typeof EspaceVeterinaireRoute
+  '/mon-compte': typeof MonCompteRoute
+  '/api/push-subscribe': typeof ApiPushSubscribeRoute
+  '/api/quiz-sync': typeof ApiQuizSyncRoute
+  '/formations/$courseId': typeof FormationsCourseIdRoute
+  '/formations/': typeof FormationsIndexRoute
+  '/api/public/jobs/push-tick': typeof ApiPublicJobsPushTickRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/cookies': typeof CookiesRoute
+  '/don': typeof DonRoute
+  '/espace-veterinaire': typeof EspaceVeterinaireRoute
+  '/mon-compte': typeof MonCompteRoute
+  '/api/push-subscribe': typeof ApiPushSubscribeRoute
+  '/api/quiz-sync': typeof ApiQuizSyncRoute
+  '/formations/$courseId': typeof FormationsCourseIdRoute
+  '/formations': typeof FormationsIndexRoute
+  '/api/public/jobs/push-tick': typeof ApiPublicJobsPushTickRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/cookies': typeof CookiesRoute
+  '/don': typeof DonRoute
+  '/espace-veterinaire': typeof EspaceVeterinaireRoute
+  '/mon-compte': typeof MonCompteRoute
+  '/api/push-subscribe': typeof ApiPushSubscribeRoute
+  '/api/quiz-sync': typeof ApiQuizSyncRoute
+  '/formations/$courseId': typeof FormationsCourseIdRoute
+  '/formations/': typeof FormationsIndexRoute
+  '/api/public/jobs/push-tick': typeof ApiPublicJobsPushTickRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/cookies'
+    | '/don'
+    | '/espace-veterinaire'
+    | '/mon-compte'
+    | '/api/push-subscribe'
+    | '/api/quiz-sync'
+    | '/formations/$courseId'
+    | '/formations/'
+    | '/api/public/jobs/push-tick'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/cookies'
+    | '/don'
+    | '/espace-veterinaire'
+    | '/mon-compte'
+    | '/api/push-subscribe'
+    | '/api/quiz-sync'
+    | '/formations/$courseId'
+    | '/formations'
+    | '/api/public/jobs/push-tick'
+  id:
+    | '__root__'
+    | '/'
+    | '/cookies'
+    | '/don'
+    | '/espace-veterinaire'
+    | '/mon-compte'
+    | '/api/push-subscribe'
+    | '/api/quiz-sync'
+    | '/formations/$courseId'
+    | '/formations/'
+    | '/api/public/jobs/push-tick'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  CookiesRoute: typeof CookiesRoute
+  DonRoute: typeof DonRoute
+  EspaceVeterinaireRoute: typeof EspaceVeterinaireRoute
+  MonCompteRoute: typeof MonCompteRoute
+  ApiPushSubscribeRoute: typeof ApiPushSubscribeRoute
+  ApiQuizSyncRoute: typeof ApiQuizSyncRoute
+  FormationsCourseIdRoute: typeof FormationsCourseIdRoute
+  FormationsIndexRoute: typeof FormationsIndexRoute
+  ApiPublicJobsPushTickRoute: typeof ApiPublicJobsPushTickRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +169,83 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/cookies': {
+      id: '/cookies'
+      path: '/cookies'
+      fullPath: '/cookies'
+      preLoaderRoute: typeof CookiesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/don': {
+      id: '/don'
+      path: '/don'
+      fullPath: '/don'
+      preLoaderRoute: typeof DonRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/espace-veterinaire': {
+      id: '/espace-veterinaire'
+      path: '/espace-veterinaire'
+      fullPath: '/espace-veterinaire'
+      preLoaderRoute: typeof EspaceVeterinaireRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mon-compte': {
+      id: '/mon-compte'
+      path: '/mon-compte'
+      fullPath: '/mon-compte'
+      preLoaderRoute: typeof MonCompteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/push-subscribe': {
+      id: '/api/push-subscribe'
+      path: '/api/push-subscribe'
+      fullPath: '/api/push-subscribe'
+      preLoaderRoute: typeof ApiPushSubscribeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/quiz-sync': {
+      id: '/api/quiz-sync'
+      path: '/api/quiz-sync'
+      fullPath: '/api/quiz-sync'
+      preLoaderRoute: typeof ApiQuizSyncRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/formations/': {
+      id: '/formations/'
+      path: '/formations'
+      fullPath: '/formations/'
+      preLoaderRoute: typeof FormationsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/formations/$courseId': {
+      id: '/formations/$courseId'
+      path: '/formations/$courseId'
+      fullPath: '/formations/$courseId'
+      preLoaderRoute: typeof FormationsCourseIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/public/jobs/push-tick': {
+      id: '/api/public/jobs/push-tick'
+      path: '/api/public/jobs/push-tick'
+      fullPath: '/api/public/jobs/push-tick'
+      preLoaderRoute: typeof ApiPublicJobsPushTickRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  CookiesRoute: CookiesRoute,
+  DonRoute: DonRoute,
+  EspaceVeterinaireRoute: EspaceVeterinaireRoute,
+  MonCompteRoute: MonCompteRoute,
+  ApiPushSubscribeRoute: ApiPushSubscribeRoute,
+  ApiQuizSyncRoute: ApiQuizSyncRoute,
+  FormationsCourseIdRoute: FormationsCourseIdRoute,
+  FormationsIndexRoute: FormationsIndexRoute,
+  ApiPublicJobsPushTickRoute: ApiPublicJobsPushTickRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

@@ -70,78 +70,163 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  --color-primary-hover: var(--primary-hover);
+  --color-destructive-soft: var(--destructive-soft);
+  --color-success-soft: var(--success-soft);
+  --color-photo: var(--photo);
+  --color-photo-foreground: var(--photo-foreground);
+  --color-photo-muted: var(--photo-muted);
+  --color-photo-accent: var(--photo-accent);
+  --color-deep: var(--deep);
+  --color-av-0: var(--av-0);
+  --color-av-1: var(--av-1);
+  --color-av-2: var(--av-2);
+  --color-av-3: var(--av-3);
+  --color-av-4: var(--av-4);
+  --color-av-5: var(--av-5);
+  --color-google-bg: var(--google-bg);
+  --color-google-bg-hover: var(--google-bg-hover);
+  --color-google-border: var(--google-border);
+  --color-google-fg: var(--google-fg);
+  --font-sans: Arial, Helvetica, sans-serif;
+  --font-display: Georgia, "Times New Roman", serif;
+  --shadow-soft-card: var(--shadow-card);
+  --shadow-float: var(--shadow-pill);
+  --color-award: var(--award);
+  --color-award-soft: var(--award-soft);
+  --color-award-foreground: var(--award-foreground);
+  --color-certificate: var(--certificate);
+  --color-certificate-foreground: var(--certificate-foreground);
+  --color-certificate-muted: var(--certificate-muted);
+  --color-warning-soft: var(--warning-soft);
+  --color-header-glass: var(--header-glass);
+  --color-nav-active: var(--nav-active);
 }
 
 :root {
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
+  /* VetoCare palette, aligned on public/site/assets/home-tokens.css (forest green). */
+  --radius: 0.75rem;
+  --background: oklch(0.995 0.002 150);
+  --foreground: oklch(0.27 0.017 155);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.129 0.042 264.695);
+  --card-foreground: oklch(0.27 0.017 155);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
-  --primary-foreground: oklch(0.984 0.003 247.858);
-  --secondary: oklch(0.968 0.007 247.896);
-  --secondary-foreground: oklch(0.208 0.042 265.755);
-  --muted: oklch(0.968 0.007 247.896);
-  --muted-foreground: oklch(0.554 0.046 257.417);
-  --accent: oklch(0.968 0.007 247.896);
-  --accent-foreground: oklch(0.208 0.042 265.755);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.929 0.013 255.508);
-  --input: oklch(0.929 0.013 255.508);
-  --ring: oklch(0.704 0.04 256.788);
+  --popover-foreground: oklch(0.27 0.017 155);
+  --primary: oklch(0.43 0.071 160);
+  --primary-hover: oklch(0.36 0.067 160);
+  --primary-foreground: oklch(0.995 0.002 150);
+  --secondary: oklch(0.963 0.01 155);
+  --secondary-foreground: oklch(0.27 0.017 155);
+  --muted: oklch(0.963 0.01 155);
+  --muted-foreground: oklch(0.52 0.018 155);
+  --accent: oklch(0.963 0.01 155);
+  --accent-foreground: oklch(0.36 0.067 160);
+  --destructive: oklch(0.52 0.165 27);
+  --destructive-foreground: oklch(0.995 0.002 150);
+  --destructive-soft: oklch(0.962 0.022 25);
+  --success-soft: oklch(0.955 0.03 155);
+  --border: oklch(0.9 0.009 155);
+  --input: oklch(0.86 0.012 155);
+  --ring: oklch(0.43 0.071 160);
+  --photo: oklch(0.24 0.04 160);
+  --photo-foreground: oklch(1 0 0);
+  --photo-muted: oklch(0.93 0.009 150);
+  --photo-accent: oklch(0.86 0.13 150);
+  --deep: oklch(0.27 0.065 160);
+  /* Brevets, badges et mentions (or doux). */
+  --award: oklch(0.66 0.11 80);
+  --award-soft: oklch(0.96 0.035 85);
+  --award-foreground: oklch(0.42 0.08 70);
+  --warning-soft: oklch(0.965 0.04 75);
+  /* Brevet : papier crème, identique au PDF (même en mode sombre). */
+  --certificate: oklch(0.985 0.01 95);
+  --certificate-foreground: oklch(0.3 0.02 155);
+  --certificate-muted: oklch(0.55 0.02 155);
+  /* Initial-letter avatars (same values as --vc-av-* in public/site/assets/style.css). */
+  --av-0: oklch(0.43 0.071 160);
+  --av-1: oklch(0.49 0.088 28);
+  --av-2: oklch(0.5 0.09 250);
+  --av-3: oklch(0.55 0.12 60);
+  --av-4: oklch(0.45 0.09 320);
+  --av-5: oklch(0.48 0.08 200);
+  --auth-panel-overlay: linear-gradient(180deg, oklch(0.27 0.065 160 / 10%) 0%, oklch(0.27 0.065 160 / 35%) 45%, oklch(0.24 0.06 160 / 92%) 100%);
+  --auth-glow: radial-gradient(120% 80% at 0% 0%, oklch(0.86 0.13 150 / 14%) 0%, transparent 55%);
+  --shadow-card: 0 24px 60px -24px oklch(0.27 0.065 160 / 35%);
+  --shadow-pill: 0 18px 40px -12px oklch(0.2 0.022 155 / 45%);
+  /* Google brand button (Google identity guidelines, light theme). */
+  --google-bg: oklch(1 0 0);
+  --google-bg-hover: oklch(0.975 0 0);
+  --google-border: oklch(0.55 0.004 160);
+  --google-fg: oklch(0.24 0 0);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.984 0.003 247.858);
-  --sidebar-foreground: oklch(0.129 0.042 264.695);
-  --sidebar-primary: oklch(0.208 0.042 265.755);
-  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-accent: oklch(0.968 0.007 247.896);
-  --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
-  --sidebar-border: oklch(0.929 0.013 255.508);
-  --sidebar-ring: oklch(0.704 0.04 256.788);
+  --sidebar: oklch(0.985 0.004 150);
+  --sidebar-foreground: oklch(0.27 0.017 155);
+  --sidebar-primary: oklch(0.43 0.071 160);
+  --sidebar-primary-foreground: oklch(0.995 0.002 150);
+  --sidebar-accent: oklch(0.963 0.01 155);
+  --sidebar-accent-foreground: oklch(0.27 0.017 155);
+  --sidebar-border: oklch(0.9 0.009 155);
+  --sidebar-ring: oklch(0.43 0.071 160);
+  /* Bandeau du compte (dégradé vert forêt) et en-tête translucide. */
+  --hero-from: oklch(0.27 0.065 160);
+  --hero-to: oklch(0.43 0.071 160);
+  --header-glass: oklch(0.995 0.002 150 / 85%);
+  --nav-active: oklch(0.955 0.03 155);
 }
 
+/* Mode sombre : forêt de nuit, mêmes rôles que le mode clair. */
 .dark {
-  color-scheme: dark;
-  --background: oklch(0.129 0.042 264.695);
-  --foreground: oklch(0.984 0.003 247.858);
-  --card: oklch(0.208 0.042 265.755);
-  --card-foreground: oklch(0.984 0.003 247.858);
-  --popover: oklch(0.208 0.042 265.755);
-  --popover-foreground: oklch(0.984 0.003 247.858);
-  --primary: oklch(0.929 0.013 255.508);
-  --primary-foreground: oklch(0.208 0.042 265.755);
-  --secondary: oklch(0.279 0.041 260.031);
-  --secondary-foreground: oklch(0.984 0.003 247.858);
-  --muted: oklch(0.279 0.041 260.031);
-  --muted-foreground: oklch(0.704 0.04 256.788);
-  --accent: oklch(0.279 0.041 260.031);
-  --accent-foreground: oklch(0.984 0.003 247.858);
-  --destructive: oklch(0.704 0.191 22.216);
-  --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.551 0.027 264.364);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.208 0.042 265.755);
-  --sidebar-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-accent: oklch(0.279 0.041 260.031);
-  --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.551 0.027 264.364);
+  --background: oklch(0.165 0.012 160);
+  --foreground: oklch(0.95 0.006 150);
+  --card: oklch(0.205 0.014 160);
+  --card-foreground: oklch(0.95 0.006 150);
+  --popover: oklch(0.215 0.014 160);
+  --popover-foreground: oklch(0.95 0.006 150);
+  --primary: oklch(0.74 0.12 157);
+  --primary-hover: oklch(0.8 0.115 157);
+  --primary-foreground: oklch(0.18 0.03 160);
+  --secondary: oklch(0.255 0.015 160);
+  --secondary-foreground: oklch(0.95 0.006 150);
+  --muted: oklch(0.255 0.015 160);
+  --muted-foreground: oklch(0.72 0.014 155);
+  --accent: oklch(0.255 0.015 160);
+  --accent-foreground: oklch(0.84 0.1 157);
+  --destructive: oklch(0.7 0.17 25);
+  --destructive-foreground: oklch(0.18 0.02 25);
+  --destructive-soft: oklch(0.28 0.06 25);
+  --success-soft: oklch(0.28 0.045 158);
+  --border: oklch(0.3 0.014 160);
+  --input: oklch(0.36 0.016 160);
+  --ring: oklch(0.74 0.12 157);
+  --deep: oklch(0.22 0.05 160);
+  --award: oklch(0.78 0.12 80);
+  --award-soft: oklch(0.3 0.05 80);
+  --award-foreground: oklch(0.86 0.1 85);
+  --warning-soft: oklch(0.3 0.05 75);
+  --auth-glow: radial-gradient(120% 80% at 0% 0%, oklch(0.74 0.12 157 / 10%) 0%, transparent 55%);
+  --shadow-card: 0 24px 60px -24px oklch(0 0 0 / 65%);
+  --shadow-pill: 0 18px 40px -12px oklch(0 0 0 / 70%);
+  /* Google, thème sombre officiel. */
+  --google-bg: oklch(0.18 0.003 286);
+  --google-bg-hover: oklch(0.24 0.003 286);
+  --google-border: oklch(0.65 0.006 150);
+  --google-fg: oklch(0.91 0 0);
+  --sidebar: oklch(0.19 0.013 160);
+  --sidebar-foreground: oklch(0.95 0.006 150);
+  --sidebar-primary: oklch(0.74 0.12 157);
+  --sidebar-primary-foreground: oklch(0.18 0.03 160);
+  --sidebar-accent: oklch(0.255 0.015 160);
+  --sidebar-accent-foreground: oklch(0.95 0.006 150);
+  --sidebar-border: oklch(0.3 0.014 160);
+  --sidebar-ring: oklch(0.74 0.12 157);
+  --hero-from: oklch(0.2 0.04 160);
+  --hero-to: oklch(0.31 0.06 160);
+  --header-glass: oklch(0.165 0.012 160 / 85%);
+  --nav-active: oklch(0.28 0.045 158);
 }
 
 @layer base {
@@ -152,5 +237,78 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-sans);
   }
+}
+
+@utility bg-auth-overlay {
+  background-image: var(--auth-panel-overlay);
+}
+
+@utility bg-auth-glow {
+  background-image: var(--auth-glow);
+}
+
+@keyframes caret-blink {
+  0%, 70%, 100% { opacity: 1; }
+  20%, 50% { opacity: 0; }
+}
+
+@keyframes rise-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: none; }
+}
+
+@utility animate-rise {
+  animation: rise-in 0.45s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+@utility animate-caret {
+  animation: caret-blink 1.1s step-end infinite;
+}
+
+@utility bg-account-hero {
+  background-image: radial-gradient(120% 140% at 100% 0%, oklch(0.86 0.13 150 / 22%) 0%, transparent 55%), linear-gradient(135deg, var(--hero-from) 0%, var(--hero-to) 100%);
+}
+
+@media print {
+  .quiz-guard { display: none !important; }
+}
+
+@keyframes shimmer {
+  from { background-position: -200% 0; }
+  to { background-position: 200% 0; }
+}
+
+/* Bloc de chargement animé (squelette). */
+@utility skeleton {
+  border-radius: var(--radius);
+  background-image: linear-gradient(90deg, var(--muted) 0%, var(--card) 50%, var(--muted) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s ease-in-out infinite;
+}
+
+/* ---------- Académie (catalogue des formations, inspiré de Cisco NetAcad) ---------- */
+/* Coins asymétriques des photos de l'en-tête. */
+@utility shape-leaf {
+  border-radius: 1.75rem 0.5rem 1.75rem 0.5rem;
+}
+@utility shape-leaf-alt {
+  border-radius: 0.5rem 1.75rem 0.5rem 1.75rem;
+}
+/* Trame de points décorative. */
+@utility bg-dots {
+  background-image: radial-gradient(color-mix(in oklab, var(--primary) 35%, transparent) 1.2px, transparent 1.4px);
+  background-size: 14px 14px;
+}
+/* Bandeau « Pourquoi obtenir un brevet ? ». */
+@utility bg-academy-band {
+  background-image: linear-gradient(120deg, var(--deep) 0%, var(--photo) 100%);
+}
+
+/* Le brevet reste un papier clair en mode sombre : couleurs du thème clair dans son cadre. */
+.certificate-paper {
+  --primary: oklch(0.43 0.071 160);
+  --award: oklch(0.66 0.11 80);
+  --award-foreground: oklch(0.42 0.08 70);
 }

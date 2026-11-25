@@ -1,23 +1,23 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useEffect } from "react";
 
-// The home route ships no og:image, so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "VétoCare – Santé animale" },
+      { name: "description", content: "Fiches animaux, maladies, conseils et quiz vétérinaires." },
+      { property: "og:title", content: "VétoCare – Santé animale" },
+      { property: "og:description", content: "Fiches animaux, maladies, conseils et quiz vétérinaires." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
+  useEffect(() => {
+    window.location.replace("/site/index.html");
+  }, []);
+  return <p className="p-8 text-center text-muted-foreground">Chargement de VétoCare…</p>;
 }
